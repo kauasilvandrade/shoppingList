@@ -18,7 +18,7 @@
   
   <div class="container">
 
-    <div class="desktop-only">
+    <div class="desktop-ony">
       <img src="assets/images/logo.svg" alt="Logo quicklist">
     </div>
 
@@ -29,28 +29,15 @@
       <h1>Compras da semana</h1>
 
       <form class="inputWrapper">
-        <input type="text" name="item" id="item">
-        <button>Adicionar item</button>
+        <input type="text" name="item" id="item" placeholder="Adicione um novo item">
+        <button id="btnAddItem">Adicionar item</button>
       </form>
 
-      <ul role="list">
-        <li><p>Pão de forma</p> 
-          <img src="assets/images/trash.svg" alt="Trash Icon">
-        </li>
-
-        <li>
-          <p>Café preto</p> 
-          <img src="assets/images/trash.svg" alt="Trash Icon">
-        </li>
+      <ul role="list" id="shoppingList">
 
         <li>
           <p>Suco de laranja</p> 
-          <img src="assets/images/trash.svg" alt="Trash Icon">
-        </li>
-
-        <li>
-          <p>Bolacha</p> 
-          <img src="assets/images/trash.svg" alt="Trash Icon">
+          <button id="btnDeleteItem"><img src="assets/images/trash.svg" alt="Trash Icon"></button>
         </li>
 
       </ul>
@@ -58,7 +45,7 @@
       <div class="alert-error">
         <img src="assets/images/circle-alert.svg" alt="Alert Icon">
         <p>O item foi removido da lista</p>
-        <img src="assets/images/x.svg" alt="X Icon">
+        <button id="btnCloseError"><img src="assets/images/x.svg" alt="X Icon"></button>
       </div>
 
     </main>

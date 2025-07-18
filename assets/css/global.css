@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--background-primary);
+}
+
 a {
   text-decoration: none;
 }
@@ -20,12 +24,26 @@ button {
   border: none;
 }
 
+.container {
+  --max-width: 23.45rem;
+  width: min(var(--max-width), 100% - 1.5rem * 2);
+  margin-inline: auto;
+  padding-top: 2rem;
+}
+
 .desktop-ony {
   display: none;
 }
 
 @media (width >= 80rem) {
+  .container {
+    --max-width: 38rem;
+  }
+
   .desktop-ony {
-    display: initial;
+    display: block;
+    margin: auto;
+    width: 9rem;
+    margin-bottom: 3rem;
   }
 }
