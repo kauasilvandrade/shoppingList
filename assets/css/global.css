@@ -1,2 +1,31 @@
 @import url(variable.css);
 @import url(styles.css);
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul[role="list"] {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.desktop-ony {
+  display: none;
+}
+
+@media (width >= 80rem) {
+  .desktop-ony {
+    display: initial;
+  }
+}
