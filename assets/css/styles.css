@@ -56,6 +56,7 @@ main {
       font: var(--label);
       transition: .5s;
       outline: none;
+      width: 100%;
 
       &:hover, &:focus {
         background-color: var(--color-brand-hover);
@@ -66,11 +67,12 @@ main {
 
   li, .alert-error {
     border-radius: 12px;
-    justify-content: space-between;
   }
   
-  button, .alert-error {
-    padding: 0.81rem;
+  button, #btnCloseError {
+    cursor: pointer;
+    padding: 0.81rem; 
+    margin-left: auto; 
   }
 
   ul {
@@ -82,24 +84,42 @@ main {
       background-color: var(--background-secondary);
       align-items: center;
       font: var(--paragraph);
+      position: relative;
+      padding-left: 2.5rem;
+      cursor: pointer;
 
       &::before {
         content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 4px;
+        border: 2px solid var(--border-primary);
+        left: 0.81rem;
       }
       
-      button {
-        cursor: pointer;
-      }
-
+    }
+    
+    /* CLASSES EM JS */
+    li.checked::before {
+      border: 2px solid var(--color-brand);
+      background: url(../images/checked.svg) center / 1rem;
     }
 
+  }
+
+  .alert-error.erro {
+    display: flex;
   }
 
   .alert-error {
     background-color: var(--color-danger);
     align-items: center;
+    gap: 0.5rem;
     font: var(--paragraph);
     color: var(--always-white);
+    padding-left: 0.81rem;
+    display: none;
   }
 
 }
