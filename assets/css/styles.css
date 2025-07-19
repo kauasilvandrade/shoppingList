@@ -1,6 +1,6 @@
 main {
 
-  & a, & .inputWrapper, & ul, & li, & .alert-error {
+  & a, & .inputWrapper, & ul, & li, & .alertError {
     display: flex;
   }
 
@@ -65,7 +65,7 @@ main {
 
   }
 
-  li, .alert-error {
+  li, .alertError {
     border-radius: 12px;
   }
   
@@ -108,18 +108,18 @@ main {
 
   }
 
-  .alert-error.erro {
-    display: flex;
+  .alertError.erro {
+    animation: appear 2s;
   }
 
-  .alert-error {
+  .alertError {
     background-color: var(--color-danger);
     align-items: center;
     gap: 0.5rem;
     font: var(--paragraph);
     color: var(--always-white);
     padding-left: 0.81rem;
-    display: none;
+    opacity: 0;
   }
 
 }
@@ -132,5 +132,11 @@ main {
         width: 12rem;
       }
     } 
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
   }
 }
